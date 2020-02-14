@@ -1,6 +1,4 @@
 Private Sub Chuan_hoa()
-    Dim i As Integer
-    On Error Resume Next
     ActiveDocument.Range.ListFormat.ConvertNumbersToText
     Application.ScreenUpdating = False
     Selection.WholeStory
@@ -16,7 +14,7 @@ Private Sub Chuan_hoa()
         .LineUnitAfter = 0
     End With
     Selection.ParagraphFormat.TabStops.ClearAll
-' Delete symbols in original file
+' Xoa ky hieu thua cua file goc
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
@@ -27,7 +25,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -37,7 +38,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -47,7 +51,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
     Do While .Execute
         .Execute Replace:=wdReplaceAll
     Loop
@@ -59,7 +66,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
     Do While .Execute
         .Execute Replace:=wdReplaceAll
     Loop
@@ -72,7 +82,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = True
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -82,7 +95,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -92,12 +108,15 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
     Do While .Execute
         .Execute Replace:=wdReplaceAll
     Loop
     End With
-' Kepp underline format for Answer key
+' Giu lai dinh dang gach chan cho Dap an
     Selection.Find.ClearFormatting
     Selection.Find.Font.Color = wdColorRed
     Selection.Find.Replacement.ClearFormatting
@@ -126,7 +145,7 @@ Private Sub Chuan_hoa()
         .MatchWildcards = True
         .Execute Replace:=wdReplaceAll
     End With
-'Processing format options
+'Xu ly dinh dang cac phuong an (co chu y tranh nhan dang nham noi dung de)
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find.Replacement.Font
@@ -140,7 +159,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = True
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     Selection.Find.ClearFormatting
@@ -152,7 +174,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = True
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -162,7 +187,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -172,7 +200,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -182,7 +213,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -192,7 +226,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = False
         .MatchCase = True
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     Selection.Find.ClearFormatting
@@ -209,7 +246,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -219,7 +259,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -229,7 +272,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -239,7 +285,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -249,7 +298,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
 ' Xoa ky hieu thua phat sinh
@@ -262,7 +314,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -274,7 +329,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -286,7 +344,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -298,7 +359,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
         .Execute Replace:=wdReplaceAll
     End With
     With Selection.Find
@@ -310,7 +374,10 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
     Do While .Execute
         .Execute Replace:=wdReplaceAll
     Loop
@@ -324,12 +391,15 @@ Private Sub Chuan_hoa()
         .Wrap = wdFindContinue
         .Format = True
         .MatchCase = False
+        .MatchWholeWord = False
         .MatchWildcards = False
+        .MatchSoundsLike = False
+        .MatchAllWordForms = False
     Do While .Execute
         .Execute Replace:=wdReplaceAll
     Loop
     End With
-' Return previous format for table
+' Tra lai dinh dang ban dau cho bang
   If ActiveDocument.Tables.Count > 0 Then
     For i = 1 To ActiveDocument.Tables.Count
         ActiveDocument.Tables(i).Select
